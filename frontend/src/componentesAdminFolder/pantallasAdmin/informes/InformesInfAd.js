@@ -12,7 +12,7 @@ const InformesInfAd = () => {
     // Función para obtener los datos de los proyectos desde el backend
     const fetchProyectosData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/proyecto'); // Endpoint para obtener los proyectos
+        const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto'); // Endpoint para obtener los proyectos
         const proyectos = response.data;
 
         // Procesar los datos de las tareas para la gráfica

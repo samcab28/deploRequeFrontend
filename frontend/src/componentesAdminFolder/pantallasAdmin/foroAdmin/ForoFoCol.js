@@ -9,7 +9,7 @@ function ForoFoAd() {
 
   const fetchMessages = async () => {
     try {
-        const response = await axios.get('http://localhost:4000/api/foro/660d97e3783f0dbbe89eba1a/mensaje');
+        const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/foro/660d97e3783f0dbbe89eba1a/mensaje');
         const mensajes = response.data;
         
         // Obtener el nombre y el departamento del autor de cada mensaje
@@ -41,7 +41,7 @@ useEffect(() => {
 const dataAdmin = async (idAutor) => {
   try {
       // Realizar la solicitud GET para obtener la información del usuario
-      const response = await axios.get(`http://localhost:4000/api/Admin/${idAutor}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin/${idAutor}`);
       //console.log("HOLA MINCHUS: ", response);
       if (!response || !response.data) {
           console.error('Error: Datos del administrador no encontrados');
@@ -59,7 +59,7 @@ const dataAdmin = async (idAutor) => {
 const dataColab = async (idAutor) => {
   try {
       // Realizar la solicitud GET para obtener la información del usuario
-      const response = await axios.get(`http://localhost:4000/api/colaborador/${idAutor}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${idAutor}`);
       if (!response && !response.data) {
         console.error('Error: Datos del colaborador no encontrados');
         return null;
@@ -96,7 +96,7 @@ const dataColab = async (idAutor) => {
       }
 
       // Realizar la solicitud GET para obtener la información del usuario
-      const response = await axios.get(`http://localhost:4000/api/Admin/${idAutor}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin/${idAutor}`);
       let nombreAutor = ' ';
       
       if (response && response.data) {
@@ -105,7 +105,7 @@ const dataColab = async (idAutor) => {
         console.log(nombreAutor);
       } else {
         //caso ser colaborador
-        const colab = await axios.get(`http://localhost:4000/api/colaborador/${idAutor}`);
+        const colab = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${idAutor}`);
         nombreAutor = colab.data.nombre;
         console.log(nombreAutor);
       }
@@ -114,7 +114,7 @@ const dataColab = async (idAutor) => {
      //const nombreAutor = response.data.nombre;
       // Realizar la solicitud POST para enviar el mensaje
       await axios.post(
-        'http://localhost:4000/api/foro/660d97e3783f0dbbe89eba1a/mensaje',
+        'https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/foro/660d97e3783f0dbbe89eba1a/mensaje',
         { nombreAutor, idAutor, contenido: mensaje }
       );
 

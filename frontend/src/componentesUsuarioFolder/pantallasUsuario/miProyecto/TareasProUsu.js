@@ -9,7 +9,7 @@ const TareasProUsu = () => {
 
   const fetchProjects = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/proyecto');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto');
       console.log('Proyectos obtenidos:', response.data);
       setProjectsList(response.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const TareasProUsu = () => {
 
   const fetchResponsableName = async (responsableId) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/colaborador/${responsableId}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${responsableId}`);
       const responsable = response.data;
       return responsable.nombre; 
     } catch (error) {
@@ -35,7 +35,7 @@ const TareasProUsu = () => {
   const handleProjectSelect = async () => {
     try {
       console.log('Proyecto seleccionado:', selectedProjectId);
-      const response = await axios.get(`http://localhost:4000/api/proyecto/${selectedProjectId}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto/${selectedProjectId}`);
       console.log('Respuesta del servidor:', response.data);
       const project = response.data;
       setTareas(project.tareas);

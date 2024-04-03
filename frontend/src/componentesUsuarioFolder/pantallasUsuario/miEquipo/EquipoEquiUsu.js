@@ -17,7 +17,7 @@ const InformeProUsu = () => {
 
   const fetchProjects = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/proyecto');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto');
       console.log('Proyectos obtenidos:', response.data);
       setProjectsList(response.data);
     } catch (error) {
@@ -31,7 +31,7 @@ const InformeProUsu = () => {
 
   const fetchCompanionsInfo = async (companionId) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/colaborador/${companionId}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${companionId}`);
       console.log('Respuesta del compañero:', response.data);
       return response.data;
     } catch (error) {
@@ -42,7 +42,7 @@ const InformeProUsu = () => {
 
   const handleProjectSelect = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/proyecto/${selectedProjectId}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto/${selectedProjectId}`);
       console.log('Proyecto seleccionado:', response.data);
       const project = response.data;
 

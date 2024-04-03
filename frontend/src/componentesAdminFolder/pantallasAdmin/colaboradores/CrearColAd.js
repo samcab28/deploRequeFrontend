@@ -24,7 +24,7 @@ const CrearColAd = () => {
   }
   
     try {
-      const url = tipoUsuario === 'colaborador' ? 'http://localhost:4000/api/colaborador/' : 'http://localhost:4000/api/admin/';
+      const url = tipoUsuario === 'colaborador' ? 'https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/' : 'https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/admin/';
       await axios.post(url, usuario);
       setDatosGuardados(usuario);
     } catch (error) {

@@ -24,7 +24,7 @@ const CrearReunion = () => {
 
   const enviarCorreo = async (datosCorreo) => {
     try {
-      const response = await axios.post('http://localhost:4000/api/sendEmail', datosCorreo);
+      const response = await axios.post('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/sendEmail', datosCorreo);
       console.log('Correo enviado correctamente:', response.data);
       // Aquí puedes manejar la respuesta del servidor si es necesario
     } catch (error) {
@@ -35,7 +35,7 @@ const CrearReunion = () => {
 
   const loadProyectosList = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/proyecto');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto');
       setProyectosList(response.data);
     } catch (error) {
       console.error('Error loading projects list:', error);
@@ -44,7 +44,7 @@ const CrearReunion = () => {
 
   const loadColaboradoresDisponibles = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/colaborador');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador');
       setColaboradoresDisponibles(response.data);
     } catch (error) {
       console.error('Error loading available collaborators:', error);
@@ -53,7 +53,7 @@ const CrearReunion = () => {
 
   const loadAdministradoresDisponibles = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/Admin');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin');
       setAdministradoresDisponibles(response.data);
     } catch (error) {
       console.error('Error loading available administrators:', error);
@@ -86,7 +86,7 @@ const CrearReunion = () => {
     });
 
     try {
-      const response = await axios.get(`http://localhost:4000/api/proyecto/${proyectoId.trim()}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto/${proyectoId.trim()}`);
       if (!response.data) {
         alert('No se encontró ningún proyecto con el ID proporcionado!');
         return; // Salir de la función temprano si no se encontró el proyecto
@@ -94,7 +94,7 @@ const CrearReunion = () => {
       alert('Reunión creada.');
 
       // Crear la reunión en el backend
-      await axios.post('http://localhost:4000/api/reunion', datos);
+      await axios.post('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/reunion', datos);
 
       // Enviar correos electrónicos a los participantes de la reunión
       const asunto = `Nueva reunión sobre el tema: ${tema}`;

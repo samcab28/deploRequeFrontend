@@ -9,7 +9,7 @@ const BCProUsu = () => {
 
   const fetchProjects = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/proyecto');
+      const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto');
       setProjectsList(response.data);
     } catch (error) {
       console.error('Error fetching projects:', error);
@@ -22,7 +22,7 @@ const BCProUsu = () => {
 
   const handleProjectSelect = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/burndown/${selectedProjectId}`);
+      const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/burndown/${selectedProjectId}`);
       setBurndownData(response.data);
     } catch (error) {
       console.error('Error fetching burndown data:', error);

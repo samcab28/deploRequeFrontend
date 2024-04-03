@@ -18,7 +18,7 @@ const ConsultarColAd = () => {
             return; // Exit the function early
         }
         try {
-            const response = await axios.get(`http://localhost:4000/api/colaborador/${searchId}`);
+            const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${searchId}`);
             setColaborador(response.data);
         } catch (error) {
             alert('Error: ese ID de Colaborador no existe');
@@ -33,7 +33,7 @@ const ConsultarColAd = () => {
             return; // Exit the function early
         }
         try {
-            const response = await axios.get(`http://localhost:4000/api/Admin/${searchId}`);
+            const response = await axios.get(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin/${searchId}`);
             setAdmin(response.data);
         } catch (error) {
             alert('Error: ese ID de Administrador no existe');
@@ -43,7 +43,7 @@ const ConsultarColAd = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:4000/api/colaborador/${colaborador._id}`);
+            await axios.delete(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${colaborador._id}`);
             setColaborador(null);
             loadColaboradoresList();
         } catch (error) {
@@ -53,7 +53,7 @@ const ConsultarColAd = () => {
 
     const handleAdminDelete = async () => {
         try {
-            await axios.delete(`http://localhost:4000/api/Admin/${admin._id}`);
+            await axios.delete(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin/${admin._id}`);
             setAdmin(null);
             loadAdminsList();
         } catch (error) {
@@ -63,7 +63,7 @@ const ConsultarColAd = () => {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:4000/api/colaborador/${colaborador._id}`, { [selectedField]: newData });
+            await axios.put(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador/${colaborador._id}`, { [selectedField]: newData });
             setColaborador(null);
             loadColaboradoresList();
         } catch (error) {
@@ -73,7 +73,7 @@ const ConsultarColAd = () => {
 
     const handleAdminUpdate = async () => {
         try {
-            await axios.put(`http://localhost:4000/api/Admin/${admin._id}`, { [selectedField]: newData });
+            await axios.put(`https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin/${admin._id}`, { [selectedField]: newData });
             setAdmin(null);
             loadAdminsList();
         } catch (error) {
@@ -83,7 +83,7 @@ const ConsultarColAd = () => {
 
     const loadColaboradoresList = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/colaborador');
+            const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador');
             setColaboradoresList(response.data);
         } catch (error) {
             console.error('Error loading collaborators list:', error);
@@ -92,7 +92,7 @@ const ConsultarColAd = () => {
 
     const loadAdminsList = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/Admin');
+            const response = await axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin');
             setAdminsList(response.data);
         } catch (error) {
             console.error('Error loading admins list:', error);

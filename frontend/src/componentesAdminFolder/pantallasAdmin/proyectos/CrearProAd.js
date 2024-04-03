@@ -17,7 +17,7 @@ const CrearProyecto = () => {
 
   useEffect(() => {
     // Obtener la lista de colaboradores disponibles
-    axios.get('http://localhost:4000/api/colaborador')
+    axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/colaborador')
       .then(response => {
         setColaboradoresDisponibles(response.data);
       })
@@ -26,7 +26,7 @@ const CrearProyecto = () => {
       });
 
     // Obtener la lista de responsables disponibles
-    axios.get('http://localhost:4000/api/Admin')
+    axios.get('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/Admin')
       .then(response => {
         setResponsablesDisponibles(response.data);
       })
@@ -47,7 +47,7 @@ const CrearProyecto = () => {
     setDatosGuardados(datos);
   
     // Enviar los datos al servidor para crear el proyecto
-    axios.post('http://localhost:4000/api/proyecto/', datos)
+    axios.post('https://ancient-savannah-86041-b59d8e70e572.herokuapp.com/api/proyecto/', datos)
       .then(response => {
         console.log('Proyecto creado exitosamente:', response.data);
       })
