@@ -1,0 +1,79 @@
+/*Contenedor de la izquierda donde van las opciones*/
+.space-x-8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .dropDownContainer{
+    display: flex;
+    place-items: left;
+    position: 'relative';      
+    width: 'fit-content' 
+  }
+  
+  .botonSalir{
+    border: none;
+    background:rgb(204, 0, 0);
+    color:  rgba(255,255,255);
+    width: 245px;
+    padding-right: 5px;
+    padding-top: 5px;
+    height: 30px;
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  /*Botones 'grandes'*/
+  
+  .ddinline{ /*Contiene todos los botones*/
+    position: 'inline-block';
+    width: 'fit-content';
+    font-size: large;
+  }
+  
+  .ddButtonContainer{ /*Contiene cada boton*/
+    position: 'inline-block';
+    width: 'fit-content';
+    font-size: large;
+    padding: 3px;
+  }
+  
+  .buttonOne{
+    border: none;
+    background:rgb(0, 96, 128);
+    color:  rgba(255,255,255);
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .buttonOne:hover {
+    background:rgb(0, 96, 128); 
+  }
+  
+  /*Botones 'pequenios'*/
+  .ddoptions{ /*Contiene todos los botones*/
+    display: 'flex';
+    flex-direction: 'column';
+    font-size: large;
+  }
+  
+  .buttonDos{
+    border: none;
+    background:  rgb(31, 31, 31);
+    color:  rgba(255,255,255);
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    text-align: right;
+    font-weight: normal;
+    margin-left:3px;
+  }
+  
+  .buttonDos:hover {
+    background:rgb(204, 255, 230);
+    color: black;
+  }

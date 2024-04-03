@@ -1,0 +1,131 @@
+.simpleContainer{
+    display: inline-block;
+    place-items: left;
+    position: 'relative';      
+    width: 'fit-content' ;
+    padding-left: 15px;
+}
+
+.smallContainer{
+    position: 'relative';      
+    width: 'fit-content' ;
+    padding-left: 15px;
+    padding-top:30px;
+}
+
+h1{
+    font-size: 30px;
+    color:  rgba(255,255,255);
+    text-align: Left;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 25px;
+    color:  rgba(255,255,255);
+    height: 25px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: 18px;
+    color:  rgba(255,255,255);
+    height: 10px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.Label{
+    font-size: 18px;
+    color:  rgba(255,255,255);
+    margin-bottom: 5px;
+}
+
+.TextField{
+    font-size: 18px;
+    color: rgba(255,255,255);
+    background-color: rgb(0, 96, 128);
+    margin-left:10px;
+}
+
+.TextFieldWhite{
+    font-size: 18px;
+    color: rbg(0,0,0);
+    background-color: rgba(255,255,255);
+    margin-left:10px;
+}
+
+select{
+    font-size: 18px;
+    color: rgba(255,255,255);
+    background-color: rgb(0, 96, 128); 
+}
+
+.DropDownSimple{
+    font-size: 18px;
+    color: rgba(255,255,255);
+    background-color: rgb(0, 96, 128);
+    margin-left:10px;
+}
+
+.DropDownSimpleOffset{
+    font-size: 18px;
+    margin-left:-15px;
+}
+
+.Button{
+    font-size: 18px;
+    color: rgba(0,0,0);
+    background-color: rgb(204, 255, 230);
+    margin-left:10px;
+}
+
+.ButtonOffset{
+    font-size: 18px;
+    color: rgba(0,0,0);
+    background-color: rgb(204, 255, 230);
+}
+
+.buttonRojo{
+    background:rgb(204, 0, 0);
+    color:  rgba(255,255,255);
+    font-size: 18px;
+    text-align: right;
+    font-weight: normal;
+  }
+
+.SearchBar{
+    font-size: 18px;
+    color: rgba(0,0,0);
+    background-color: rgb(254, 254, 254);
+    margin-left:-15px;
+    width: 400px;
+}
+
+.SearchBar2{
+    font-size: 18px;
+    color: rgba(0,0,0);
+    background-color: rgb(254, 254, 254);
+    margin-left:10px;
+    width: 400px;
+}
+
+.SearchBarOffset{
+    font-size: 18px;
+    color: rgba(0,0,0);
+    background-color: rgb(254, 254, 254);
+    width: 400px;
+}
+
+li{
+    font-size: 16px;
+    color:  rgba(255,255,255);
+}
+
+
+

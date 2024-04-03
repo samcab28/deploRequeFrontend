@@ -1,0 +1,95 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: rgb(31, 31, 31);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .mainContainer {
+    display: grid;
+    place-items: center; /* Esta propiedad centraliza tanto horizontal como verticalmente */
+    column-gap: 10px;
+    background-color: rgb(31, 31, 31);
+    height: 100vh;
+  }
+
+  .blankContainer {
+    display: flex;
+    column-gap: 10px;
+    background-color: rgb(31, 31, 31);
+  }
+  
+  .titulo{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+  }
+  
+  .labelWithMargin {
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .inputField {
+    width: 100%;
+    max-width: 200px;
+    background-color: rgb(0, 96, 128);
+  }
+  
+  .blueBackground {
+    background-color: rgb(0, 96, 128);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .button {
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button:hover {
+    background:rgb(0, 134, 179);
+  }
